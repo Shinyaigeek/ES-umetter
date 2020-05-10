@@ -38,3 +38,23 @@ body {
         margin: 12px auto;
     }
 }
+
+.el--content {
+    width: 80%;
+    overflow: scroll;
+}
+
+.el--icon {
+    font-size: 45px;
+    width: 10%;
+}
+
+.template {
+    &List {
+        list-style: none;
+    }
+
+    &--listel {
+        display: flex;
+    }
+}

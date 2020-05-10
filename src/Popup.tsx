@@ -27,7 +27,7 @@ export const Popup = () => {
       {isLoading ? (
         <Loading>Loading</Loading>
       ) : (
-        <TemplateList templates={templates} />
+        <TemplateList templates={templates} setTemplates={setTemplates} />
       )}
     </div>
   );
