@@ -15,7 +15,6 @@ export const Popup = () => {
         contentScriptQuery: "getTemplates",
       },
       (res: Template[]) => {
-          console.log(res)
         setTemplates(res);
         setIsLoading(false);
       }
@@ -28,7 +27,7 @@ export const Popup = () => {
       {isLoading ? (
         <Loading>Loading</Loading>
       ) : (
-        <TemplateList templates={templates} />
+        <TemplateList templates={templates} setTemplates={setTemplates} />
       )}
     </div>
   );
