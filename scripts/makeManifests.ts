@@ -45,7 +45,7 @@ const copy = () => {
         if (err) {
           throw err;
         }
-        fs.mkdir(path.join(__dirname, `../${process.env.DIST_DIR}`), () => {
+        fs.mkdir(path.join(__dirname, `../${process.env.DIST_DIR}/images`), () => {
           [
             "favicon-16x16.png",
             "favicon-32x32.png",
@@ -53,7 +53,7 @@ const copy = () => {
           ].map((img) => {
             fs.copyFile(
               path.join(__dirname, `../src/assets/${img}`),
-              path.join(__dirname, `../${process.env.DIST_DIR}/${img}`),
+              path.join(__dirname, `../${process.env.DIST_DIR}/images/${img}`),
               (err) => {
                 if (err) throw err;
                 console.log(
