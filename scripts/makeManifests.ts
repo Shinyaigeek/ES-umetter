@@ -6,34 +6,29 @@ dotenv.config();
 
 const copy = () => {
   const manifest = `{
-        "name": "RxnikkeiAutoVideoViewer",
+        "name": "ES埋めったー",
         "version": "1.0",
-        "description": "Build an Extension!",
-        "content_scripts": [
-          {
-            "matches": ["https://www.nikkei.com/article/*/"],
-            "js": ["content.js"]
-          }
-        ],
-        "page_action": {
+        "description": "ES書きたく無いにゃああああああああああああ",
+        "permissions": ["declarativeContent", "storage", "tabs"],
+        "browser_action": {
+            "default_popup": "popup.html",
             "default_icon": {
                 "16": "images/favicon-16x16.png",
-                "32": "images/favicon-32x32.png",
-            }
-        }
+                "32": "images/favicon-32x32.png"
+            },
+            "default_icon": "images/android-chrome-512x512.png"
+        },
         "background": {
           "scripts":[
             "background.js"
-          ]
+          ],
+          "persistent": false
         },
         "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-        "page_action":{
-          "default_icon": "images/android-chrome-512x512.png.png"
-        },
         "icons": {
             "16": "images/favicon-16x16.png",
-            "32": "images/favicon-32x32.png",
-        }
+            "32": "images/favicon-32x32.png"
+        },
         "manifest_version": 2
     }`;
 

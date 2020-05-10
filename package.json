@@ -5,22 +5,28 @@
   "repository": "https://github.com/Shinyaigeek/ES-umetter.git",
   "author": "<PhilisPaxil@gmail.com>",
   "scripts": {
-    "build:scripts": "ts-node scripts/makeManifests.ts"
+    "build:manifest": "ts-node scripts/makeManifests.ts",
+    "build:popup": "webpack --mode=production",
+    "build": "yarn run build:manifest && yarn run build:popup"
   },
   "license": "MIT",
   "dependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "babel-loader": "^8.1.0",
+    "clipboard-copy": "^3.1.0",
     "css-loader": "^3.5.3",
     "dotenv": "^8.2.0",
+    "html-webpack-plugin": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
     "ts-loader": "^7.0.3",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
