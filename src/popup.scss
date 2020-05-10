@@ -1,0 +1,40 @@
+body {
+    width: 400px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.addboiler {
+    &--header {
+        font-size: 32px;
+        width: 90%;
+        height: max-content;
+        padding: 4px 12px;
+        text-align: center;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+    }
+
+    &--form {
+        width: 90%;
+        margin: 6px auto;
+        transition: height 0.5s ease-out;
+        overflow: hidden;
+
+        &#active {
+            height: 250px;
+        }
+
+        &#disable {
+            height: 0px;
+        }
+    }
+
+    &--label {
+        margin: 12px auto;
+    }
+
+    &--value {
+        margin: 12px auto;
+    }
+}
