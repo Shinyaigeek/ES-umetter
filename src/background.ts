@@ -50,12 +50,9 @@ chrome.runtime.onMessage.addListener((req, sender, sendRes) => {
             }
         });
     } else if (req.contentScriptQuery === "getTemplates") {
-        console.log("kita");
         chrome.storage.sync.get(["esUmetterStore"], (result) => {
-            console.log(result);
             const arr = result?.esUmetterStore;
             if (!arr) {
-                console.log("koko");
                 sendRes([]);
             }
             const parsed = JSON.parse(arr);
