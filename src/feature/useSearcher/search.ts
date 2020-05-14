@@ -43,3 +43,20 @@ export const orPick = (target: Template[], keywords: string[]) => {
         })
     })
 }
+
+export const andPick = (target: Template[], keywords: string[]) => {
+    return target.filter(tar => {
+
+        let flag = true;
+
+        keywords.forEach(keyword => {
+            if (flag && !tar.label.includes(keyword)) {
+                flag = false
+            }
+        })
+
+        if (flag) {
+            return tar
+        }
+    })
+}
