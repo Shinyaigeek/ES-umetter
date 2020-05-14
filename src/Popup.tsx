@@ -8,6 +8,7 @@ import { Template, TemplateList } from "./components/TemplateList";
 export const Popup = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [templates, setTemplates] = React.useState<Template[]>([]);
+  const [searchWord, setSearchWord] = React.useState("");
 
   React.useEffect(() => {
     chrome.runtime.sendMessage(
